@@ -1,0 +1,218 @@
+[
+    {
+      "product_id": "P001",
+      "product_title": "Dell Inspiron 15",
+      "product_image": "https://ryans.com/storage/products/main/dell-inspiron-15-3501-10th-gen-intel-core-i3-11612426462.webp",
+      "category": "Laptop",
+      "price": 850.99,
+      "description": "A powerful laptop with a sleek design and high-performance features suitable for work and entertainment.",
+      "specification": [
+        "Intel Core i5 11th Gen",
+        "8GB RAM",
+        "256GB SSD",
+        "15.6-inch FHD Display",
+        "Windows 10 Home"
+      ],
+      "availability": true,
+      "rating": 4.5,
+      "warranty": "1 year"
+    },
+    {
+      "product_id": "P002",
+      "product_title": "MacBook Air M1",
+      "product_image": "https://adminapi.applegadgetsbd.com/storage/media/large/2323-92738.jpg",
+      "category": "Laptop",
+      "price": 1199.00,
+      "description": "Apple's ultraportable laptop with the M1 chip, offering powerful performance and incredible battery life.",
+      "specification": [
+        "Apple M1 Chip",
+        "8GB RAM",
+        "256GB SSD",
+        "13.3-inch Retina Display",
+        "macOS Big Sur"
+      ],
+      "availability": false,
+      "rating": 4.8,
+      "warranty": "1 year"
+    },
+    {
+      "product_id": "P003",
+      "product_title": "HP Pavilion 14",
+      "product_image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTHKr5UebWib6jDIh6Sm4YTgrz0pvrSSbX-DA&s",
+      "category": "Laptop",
+      "price": 700.00,
+      "description": "A versatile laptop with solid performance, ideal for both work and personal use.",
+      "specification": [
+        "Intel Core i5 10th Gen",
+        "8GB RAM",
+        "512GB SSD",
+        "14-inch FHD Display",
+        "Windows 10 Pro"
+      ],
+      "availability": true,
+      "rating": 4.3,
+      "warranty": "1 year"
+    },
+    {
+      "product_id": "P004",
+      "product_title": "Lenovo ThinkPad X1 Carbon",
+      "product_image": "https://computermania-bd.b-cdn.net/wp-content/uploads/ThinkPad-X1-Carbon-in-BD-5.jpg",
+      "category": "Laptop",
+      "price": 1350.00,
+      "description": "A premium business laptop with robust performance and excellent battery life.",
+      "specification": [
+        "Intel Core i7 11th Gen",
+        "16GB RAM",
+        "512GB SSD",
+        "14-inch UHD Display",
+        "Windows 10 Pro"
+      ],
+      "availability": true,
+      "rating": 4.9,
+      "warranty": "1 year"
+    },
+    {
+      "product_id": "P005",
+      "product_title": "Acer Aspire 5",
+      "product_image": "https://computermania-bd.b-cdn.net/wp-content/uploads/ThinkPad-X1-Carbon-in-BD-5.jpg",
+      "category": "Laptop",
+      "price": 549.99,
+      "description": "An affordable laptop with reliable performance, perfect for everyday tasks.",
+      "specification": [
+        "AMD Ryzen 5",
+        "8GB RAM",
+        "256GB SSD",
+        "15.6-inch FHD Display",
+        "Windows 10"
+      ],
+      "availability": true,
+      "rating": 4.2,
+      "warranty": "1 year"
+    },
+    {
+      "product_id": "P006",
+      "product_title": "ASUS VivoBook 15",
+      "product_image": "https://ryans.com/storage/products/main/asus-vivobook-15-k513ea-intel-core-i5-1135g7-8gb-51719725626.webp",
+      "category": "Laptop",
+      "price": 599.99,
+      "description": "A compact and lightweight laptop with good performance, suitable for students.",
+      "specification": [
+        "Intel Core i3 10th Gen",
+        "4GB RAM",
+        "128GB SSD",
+        "15.6-inch FHD Display",
+        "Windows 10"
+      ],
+      "availability": true,
+      "rating": 4.1,
+      "warranty": "1 year"
+    },
+    {
+      "product_id": "P007",
+      "product_title": "Samsung Galaxy S21",
+      "product_image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQenKvA9wl_ZIpFuOOxy0H4rKKIiNEcrIblkw&s",
+      "category": "Mobile",
+      "price": 999.99,
+      "description": "A premium smartphone with a pro-grade camera and smooth performance, designed for an exceptional user experience.",
+      "specification": [
+        "Exynos 2100",
+        "8GB RAM",
+        "128GB Storage",
+        "6.2-inch Dynamic AMOLED Display",
+        "4000mAh Battery",
+        "Android 11"
+      ],
+      "availability": true,
+      "rating": 4.7,
+      "warranty": "1 year"
+    },
+    {
+      "product_id": "P008",
+      "product_title": "iPhone 13 Pro",
+      "product_image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR9nUubQy6w0_WYD8Nq3aRtqC0bZcneeOogHHY8cDAiUBy3yax289PVqCKRnkLa-QYedzw&usqp=CAU",
+      "category": "Mobile",
+      "price": 1099.00,
+      "description": "Apple's latest smartphone with advanced camera systems, high-resolution display, and 5G capability.",
+      "specification": [
+        "A15 Bionic Chip",
+        "6GB RAM",
+        "128GB Storage",
+        "6.1-inch Super Retina XDR Display",
+        "3095mAh Battery",
+        "iOS 15"
+      ],
+      "availability": true,
+      "rating": 4.9,
+      "warranty": "1 year"
+    },
+    {
+      "product_id": "P009",
+      "product_title": "Logitech MX Master 3 Mouse",
+      "product_image": "https://www.startech.com.bd/image/cache/catalog/mouse/logitech/mx-master-3s/logitech-mx-master-3s-01-500x500.jpg",
+      "category": "Accessories",
+      "price": 99.99,
+      "description": "An advanced wireless mouse with customizable buttons and precision tracking, perfect for professionals.",
+      "specification": [
+        "Wireless/Bluetooth connectivity",
+        "4000 DPI Precision Sensor",
+        "Rechargeable Battery",
+        "Ergonomic Design"
+      ],
+      "availability": true,
+      "rating": 4.6,
+      "warranty": "2 years"
+    },
+    {
+      "product_id": "P010",
+      "product_title": "Sony WH-1000XM4 Headphones",
+      "product_image": "https://m.media-amazon.com/images/S/aplus-media-library-service-media/5d90d53f-4f7d-47b4-bf04-ae220899339c.__CR0,0,300,225_PT0_SX300_V1___.jpg",
+      "category": "Accessories",
+      "price": 349.99,
+      "description": "Industry-leading noise canceling headphones with superior sound quality and long battery life.",
+      "specification": [
+        "Wireless/Bluetooth connectivity",
+        "Active Noise Cancellation",
+        "30 Hours Battery Life",
+        "Touch Sensor Controls"
+      ],
+      "availability": true,
+      "rating": 4.7,
+      "warranty": "1 year"
+    },
+    {
+      "product_id": "P011",
+      "product_title": "iPad Pro 11-inch",
+      "product_image": "https://adminapi.applegadgetsbd.com/storage/media/large/2469-64685.jpg",
+      "category": "Tablet",
+      "price": 799.99,
+      "description": "Apple's powerful tablet with a high-performance chip and stunning Liquid Retina display.",
+      "specification": [
+        "Apple M1 Chip",
+        "8GB RAM",
+        "128GB Storage",
+        "11-inch Liquid Retina Display",
+        "iPadOS 14"
+      ],
+      "availability": true,
+      "rating": 4.8,
+      "warranty": "1 year"
+    },
+    {
+      "product_id": "P012",
+      "product_title": "Samsung Galaxy Tab S7",
+      "product_image": "https://www.custommacbd.com/cdn/shop/products/Samsung-Galaxy-Tab-S7_69894fea-4f3a-4a69-9511-c32fd0961158.png?v=1613634976",
+      "category": "Tablet",
+      "price": 649.99,
+      "description": "A powerful Android tablet with a high refresh rate display and great multitasking capabilities.",
+      "specification": [
+        "Qualcomm Snapdragon 865+",
+        "6GB RAM",
+        "128GB Storage",
+        "11-inch TFT LCD Display",
+        "Android 10"
+      ],
+      "availability": true,
+      "rating": 4.5,
+      "warranty": "1 year"
+    }
+  ]

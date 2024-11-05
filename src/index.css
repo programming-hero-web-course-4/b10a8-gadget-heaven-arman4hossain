@@ -1,0 +1,13 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+body {
+  font-family: "Sora", serif;
+
+}
+
+.bgprimaryColor {
+  background-color: #9538E2;
+}
