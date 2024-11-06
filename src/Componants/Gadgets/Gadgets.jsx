@@ -5,7 +5,7 @@ const Gadgets = () => {
     const [gadgets, setGadgets] = useState([]);
 
     useEffect(() => {
-        fetch('/public/Data/gadets.json')
+        fetch('./Data/gadets.json')
             .then(res => res.json())
             .then(data => setGadgets(data));
     }, []);

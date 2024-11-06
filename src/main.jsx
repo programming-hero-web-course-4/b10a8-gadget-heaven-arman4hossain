@@ -10,6 +10,7 @@ import Scndroot from './Componants/Roots/Scndroot';
 import Errorpage from './Componants/Error/Errorpage';
 import Productdetails from './Componants/Productdetails/Productdetails';
 import Dashboard from './Componants/Dashboard/Dashboard';
+import Statistics from './Componants/Statistic/Statistics';
 
 const router = createBrowserRouter([
   {
@@ -25,11 +26,15 @@ const router = createBrowserRouter([
       {
         path: '/product/:product_id',
         element: <Productdetails />,
-        loader: () => fetch('/public/Data/gadets.json'),
+        loader: () => fetch('./Data/gadets.json'),
       },
       {
         path: '/dashboard',
         element: <Dashboard />,
+      },
+      {
+        path: '/statistics',
+        element: <Statistics />,
       },
     ]
   },

@@ -1,9 +1,11 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { useLoaderData, useParams } from 'react-router-dom';
 import { IoCartOutline } from "react-icons/io5";
 import { FaRegHeart } from "react-icons/fa";
-import { useCart } from '../Context/CartContext'; 
+import { useCart } from '../Context/CartContext';
 import { useWishlist } from '../Context/WishContext';
+import { toast, ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const Productdetails = () => {
     const { product_id } = useParams();
@@ -14,13 +16,21 @@ const Productdetails = () => {
     const { addProduct } = useCart();
     const { addWishProduct } = useWishlist();
 
+    // State to track button click status
+    const [isAddedToCart, setIsAddedToCart] = useState(false);
+    const [isAddedToWishlist, setIsAddedToWishlist] = useState(false);
+
     // Handle add to cart
     const handleAddToCart = () => {
         addProduct(product);
+        toast.success('Added to Cart!');
+        setIsAddedToCart(true); // Disable the button after clicking
     };
 
     const handleAddToWishList = () => {
         addWishProduct(product);
+        toast.success('Added to Wishlist!');
+        setIsAddedToWishlist(true); // Disable the button after clicking
     };
 
     return (
@@ -55,17 +65,21 @@ const Productdetails = () => {
                             </div>
                             <div className="flex gap-4 w-full">
                                 {/* Add to Cart Button */}
-                                <button 
+                                <button
                                     onClick={handleAddToCart} // Add product to cart
-                                    className="btn btn-circle flex px-4 py-2 hover:bg-violet-600 bgprimaryColor text-white font-light w-auto">
+                                    className="btn btn-circle flex px-4 py-2 hover:bg-violet-600 bgprimaryColor text-white font-light w-auto"
+                                    disabled={isAddedToCart} // Disable after click
+                                >
                                     <div className='flex text-md items-center gap-2'>
                                         <h1>Add To Cart </h1>
                                         <span className='text-2xl'><IoCartOutline /></span>
                                     </div>
                                 </button>
-                                <button 
-                                 onClick={handleAddToWishList}
-                                className="btn btn-circle border-2 border-gray-200">
+                                <button
+                                    onClick={handleAddToWishList}
+                                    className="btn btn-circle border-2 border-gray-200"
+                                    disabled={isAddedToWishlist} // Disable after click
+                                >
                                     <div className='text-2xl'><FaRegHeart /></div>
                                 </button>
                             </div>
@@ -73,6 +87,18 @@ const Productdetails = () => {
                     </div>
                 </div>
             </section>
+
+            <ToastContainer
+                position="top-right"
+                autoClose={3000}
+                hideProgressBar={false}
+                newestOnTop={false}
+                closeOnClick
+                rtl={false}
+                pauseOnFocusLoss
+                draggable
+                pauseOnHover
+            />
         </div>
     );
 };

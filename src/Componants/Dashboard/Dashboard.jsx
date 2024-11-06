@@ -4,37 +4,45 @@ import { useWishlist } from '../Context/WishContext';
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 
 const Dashboard = () => {
-    const { cart, addProduct, clearCart, removeProduct } = useCart(); // Added addProduct
+    const { cart, addProduct, clearCart, removeProduct } = useCart();
     const { wishlist, removeProductFromWishlist } = useWishlist();
     const [sortOrder, setSortOrder] = useState('asc');
     const [sortedCart, setSortedCart] = useState(cart);
 
-    // Update the sorted cart whenever the cart or sortOrder changes
+    // Modal state
+    const [isModalOpen, setIsModalOpen] = useState(false);
+
     useEffect(() => {
         const sorted = [...cart].sort((a, b) => {
             if (sortOrder === 'asc') {
-                return a.price - b.price; // Sort in ascending order
+                return a.price - b.price;
             } else {
-                return b.price - a.price; // Sort in descending order
+                return b.price - a.price;
             }
         });
         setSortedCart(sorted);
     }, [cart, sortOrder]);
 
-    // Handle sorting by price
     const handleSort = () => {
-        // Toggle between ascending and descending order
         setSortOrder(prevOrder => (prevOrder === 'asc' ? 'desc' : 'asc'));
     };
 
-    // Calculate total cost
     const totalCost = sortedCart.reduce((acc, product) => acc + product.price, 0);
 
-    // Move product from wishlist to cart
     const moveToCart = (product) => {
-        addProduct(product); // Add to cart
-        removeProductFromWishlist(product.product_id); // Remove from wishlist
+        addProduct(product);
+        removeProductFromWishlist(product.product_id);
         console.log(`Moved ${product.product_title} to cart and removed from wishlist.`);
+    };
+
+    // Modal handling
+    const handlePurchase = () => {
+        setIsModalOpen(true); // Open modal on purchase
+        clearCart(); // Clear the cart
+    };
+
+    const closeModal = () => {
+        setIsModalOpen(false); // Close the modal
     };
 
     return (
@@ -103,7 +111,7 @@ const Dashboard = () => {
                         {/* Purchase Button */}
                         <div className="text-center mt-6">
                             <button
-                                onClick={clearCart} // Clear cart
+                                onClick={handlePurchase} // Trigger purchase and modal
                                 className="btn btn-danger">
                                 Purchase
                             </button>
@@ -151,6 +159,21 @@ const Dashboard = () => {
                     </div>
                 </TabPanel>
             </Tabs>
+
+            {/* Modal Popup */}
+            {isModalOpen && (
+                <div className="fixed inset-0 bg-gray-700 bg-opacity-50 flex justify-center items-center z-50">
+                    <div className="bg-white p-6 rounded-lg shadow-lg max-w-sm w-full">
+                        <h2 className="text-2xl font-bold mb-4">Buying Success</h2>
+                        <p className="mb-6">Your purchase was successful! Thank you for shopping with us.</p>
+                        <button
+                            onClick={closeModal} // Close the modal
+                            className="bg-red-500 text-white px-4 py-2 rounded-md hover:bg-red-600">
+                            Close
+                        </button>
+                    </div>
+                </div>
+            )}
         </div>
     );
 };

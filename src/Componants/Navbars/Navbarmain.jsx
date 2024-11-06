@@ -6,7 +6,7 @@ import { Link } from 'react-router-dom';
 const Navbarmain = () => {
     const navitems = <>
         <Link to="/"><li><a>Home</a></li></Link>
-        <Link to="/product"><li><a>Statistics</a></li></Link>
+        <Link to="/statistics"><li><a>Statistics</a></li></Link>
         <Link to="/dashboard"><li><a>Dashboard</a></li></Link>
     </>;
     return (
@@ -59,7 +59,7 @@ const Navbarmain = () => {
                 </div>
             </header>
             <section className='absolute left-1/2 transform -translate-x-1/2 top-[70%] w-3/5 mx-auto flex justify-center aspect-video p-4 border-2  bg-white/20 backdrop-blur-lg rounded-[35px]'>
-                <img className='w-full rounded-3xl object-cover' src="/src/assets/banner.jpg" alt="MainBanner" />
+                <img className='w-full rounded-3xl object-cover' src="./Data/banner.jpg" alt="MainBanner" />
             </section>
         </body>
 

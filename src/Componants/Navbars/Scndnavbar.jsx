@@ -7,7 +7,7 @@ const Scndnavbar = () => {
     const navitems = (
         <>
             <Link to="/"><li><a>Home</a></li></Link>
-            <Link to="/"><li><a>Statistics</a></li></Link>
+            <Link to="/statistics"><li><a>Statistics</a></li></Link>
             <Link to="/dashboard"><li><a>Dashboard</a></li></Link>
         </>
     );
