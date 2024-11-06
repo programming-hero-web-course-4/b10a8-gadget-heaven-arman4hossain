@@ -1,12 +1,13 @@
 import React from 'react';
 import { IoCartOutline } from "react-icons/io5";
 import { FaRegHeart } from "react-icons/fa";
+import { Link } from 'react-router-dom';
 
 const Navbarmain = () => {
     const navitems = <>
-        <li><a>Home</a></li>
-        <li><a>Statistics</a></li>
-        <li><a>Dashboard</a></li>
+        <Link to="/"><li><a>Home</a></li></Link>
+        <Link to="/product"><li><a>Statistics</a></li></Link>
+        <Link to="/dashboard"><li><a>Dashboard</a></li></Link>
     </>;
     return (
         <body className='max-w-screen-xl mx-auto bgprimaryColor rounded-3xl my-5 pb-24 mb-96 relative'>

@@ -1,12 +1,27 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { useLoaderData, useParams } from 'react-router-dom';
 import { IoCartOutline } from "react-icons/io5";
 import { FaRegHeart } from "react-icons/fa";
+import { useCart } from '../Context/CartContext'; 
+import { useWishlist } from '../Context/WishContext';
 
 const Productdetails = () => {
     const { product_id } = useParams();
     const data = useLoaderData();
     const product = data.find(product => product.product_id === product_id);
+
+    // Access addProduct function from CartContext
+    const { addProduct } = useCart();
+    const { addWishProduct } = useWishlist();
+
+    // Handle add to cart
+    const handleAddToCart = () => {
+        addProduct(product);
+    };
+
+    const handleAddToWishList = () => {
+        addWishProduct(product);
+    };
 
     return (
         <div className='mx-auto relative mb-96'>
@@ -39,13 +54,18 @@ const Productdetails = () => {
                                 <h2>Rating: {product.rating}</h2>
                             </div>
                             <div className="flex gap-4 w-full">
-                                <button className="btn btn-circle flex px-4 py-2 hover:bg-violet-600 bgprimaryColor text-white font-light w-auto">
+                                {/* Add to Cart Button */}
+                                <button 
+                                    onClick={handleAddToCart} // Add product to cart
+                                    className="btn btn-circle flex px-4 py-2 hover:bg-violet-600 bgprimaryColor text-white font-light w-auto">
                                     <div className='flex text-md items-center gap-2'>
                                         <h1>Add To Cart </h1>
                                         <span className='text-2xl'><IoCartOutline /></span>
                                     </div>
                                 </button>
-                                <button className="btn btn-circle border-2 border-gray-200">
+                                <button 
+                                 onClick={handleAddToWishList}
+                                className="btn btn-circle border-2 border-gray-200">
                                     <div className='text-2xl'><FaRegHeart /></div>
                                 </button>
                             </div>
@@ -53,7 +73,6 @@ const Productdetails = () => {
                     </div>
                 </div>
             </section>
-
         </div>
     );
 };

@@ -1,16 +1,20 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { IoCartOutline } from "react-icons/io5";
 import { FaRegHeart } from "react-icons/fa";
 
 const Scndnavbar = () => {
-    const navitems = <>
-        <li><a>Home</a></li>
-        <li><a>Statistics</a></li>
-        <li><a>Dashboard</a></li>
-    </>;
+    const navitems = (
+        <>
+            <Link to="/"><li><a>Home</a></li></Link>
+            <Link to="/"><li><a>Statistics</a></li></Link>
+            <Link to="/dashboard"><li><a>Dashboard</a></li></Link>
+        </>
+    );
+
     return (
-        <body className='max-w-screen-xl mx-auto bg-white'>
-            <nav className='navbar  ' >
+        <div className='max-w-screen-xl mx-auto bg-white'>
+            <nav className='navbar'>
                 <div className="navbar-start">
                     <div className="dropdown">
                         <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -49,10 +53,7 @@ const Scndnavbar = () => {
                     </button>
                 </div>
             </nav>
-
-            
-        </body>
-
+        </div>
     );
 };
 
