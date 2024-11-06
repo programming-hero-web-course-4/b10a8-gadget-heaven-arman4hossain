@@ -1,10 +1,10 @@
-# My React Charting Project
+# Gadgets Website 
 
 ## Live Website Link
-[Live Demo](https://example.com) *(Replace with your actual website link)*
+[Live Demo](https://teeny-tiny-donkey.surge.sh/) *(Replace with your actual website link)*
 
 ## Requirement Document Link
-[Requirement Document](https://example.com/requirement.pdf) *(Replace with your actual requirement document link)*
+[Requirement Document](https://github.com/programming-hero-web-course-4/b10a8-gadget-heaven-arman4hossain) *(Replace with your actual requirement document link)*
 
 ## React Fundamental Concepts Used
 This project utilizes the following fundamental React concepts:
